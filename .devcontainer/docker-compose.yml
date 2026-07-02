@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/python:3.11-bullseye
+    volumes:
+      - ..:/workspace:cached
+    network_mode: service:db
+    depends_on:
+      - db
+    command: sleep infinity 
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_local
+      MYSQL_DATABASE: staging_logistica
+    ports:
+      - "3306:3306"
