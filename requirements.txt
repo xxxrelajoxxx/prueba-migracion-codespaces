@@ -1,0 +1,12 @@
+# ---- Control de Base de Datos y Dataframes ----
+pandas==2.1.4
+sqlalchemy==2.0.25
+pymysql==1.1.0
+cryptography==42.0.2
+
+# ---- Automatización Web (Manejo de Navegador) ----
+selenium==4.16.0
+
+# ---- Google Cloud y BigQuery (Para tu fase final) ----
+google-cloud-bigquery==3.15.0
+pandas-gbq==0.20.0
